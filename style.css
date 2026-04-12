@@ -1,0 +1,200 @@
+:root {
+  --bg-color: #0f0f0f;
+  --card-bg: #1a1a1a;
+  --accent-color: #9d50bb; /* Amethyst Purple */
+  --text-main: #eeeeee;
+  --text-dim: #cccccc;
+  --max-width: 900px;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 96px 16px 60px;
+  text-align: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+h1 { font-size: 3.5rem; margin-bottom: 10px; letter-spacing: -1.5px; }
+h2 { font-size: 1.8rem; margin-top: 64px; border-bottom: 1px solid #333; padding-bottom: 8px; }
+h3 { font-size: 1.4rem; margin-top: 32px; margin-bottom: 8px; color: var(--text-main); }
+p { color: var(--text-dim); }
+b { color: var(--text-main); }
+p b, li b {
+  color: var(--accent-color);
+  background-color: color-mix(in srgb, var(--accent-color), transparent 80%);
+  padding: 2px 6px;
+  border-radius: 8px;
+  font-weight: 600;
+  display: inline-block;
+  line-height: 1.2;
+}
+ul.feature-list li::marker {
+  color: var(--accent-color);
+  /* font-size: 1.6rem; */
+}
+li b:first-of-type {
+  display: block;      /* Forces the line break */
+  width: fit-content;  /* Keeps the pill background tight to the text */
+  margin-bottom: 8px;  /* Space between the title and the description */
+  color: var(--accent-color);
+  background-color: color-mix(in srgb, var(--accent-color), transparent 80%);
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+/* Style for any OTHER bold text inside the same li (e.g., 'organized, hierarchical fashion') */
+li b:not(:first-of-type) {
+  color: var(--accent-color);
+  /* We skip the background here so the main title remains the focal point */
+  /* background: none;  */
+  /* padding: 0; */
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px 100px;
+}
+
+/* Flexbox Layout for Side-by-Side Content */
+.flex-row {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  margin: 24px 0;
+}
+
+.flex-item-large { flex: 3; }
+.flex-item-small { flex: 2; }
+
+/* Grid for the 3-image Gallery */
+/* .image-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 32px 0;
+} */
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* This centers the last row automatically */
+  gap: 24px;
+  margin: 32px 0;
+}
+
+.image-gallery img {
+  /* (100% / 3) minus a bit for the gaps */
+  width: calc(33.33% - 16px); 
+  min-width: 280px; /* Prevents images from getting too tiny */
+  flex-grow: 0;
+  object-fit: cover;
+}
+
+img {
+  width: 100%;
+  border-radius: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, outline-color 0.3s;
+  outline: 2px solid transparent;
+  cursor: zoom-in;
+  display: block;
+}
+
+img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px color-mix(in srgb, var(--accent-color), transparent 50%);
+  outline: solid var(--accent-color);
+}
+
+.feature-list {
+  padding-left: 16px;
+  color: var(--text-dim);
+}
+
+.portrait-feature {
+  margin: 32px 0;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.portrait-feature .flex-item-image {
+  flex: 0 0 33.33%; /* 0 grow, 0 shrink, 33% basis */
+  max-width: 33.33%;
+}
+
+.portrait-feature .flex-item-text {
+  flex: 1;
+}
+
+.portrait-feature .flex-item-text h3 {
+  margin-top: 0
+}
+
+.portrait-feature img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 1rem;
+}
+
+.feature-list li { margin-bottom: 16px; }
+
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: zoom-out;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img {
+  transform: none; /* Reset any transforms from hover */
+  width: auto; 
+  height: auto;
+
+  max-width: 90vw; 
+  max-height: 90vh;
+
+  cursor: zoom-out;
+  
+  display: block;
+  border-radius: 1rem;
+  /* box-shadow: 0 0 50px rgba(0,0,0,0.8); */
+  
+  flex-shrink: 0;
+}
+
+.lightbox img {
+  border: 2px solid var(--accent-color);
+  outline: none;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+
+
+@media (max-width: 768px) {
+  .flex-row { flex-direction: column; }
+  .image-gallery { grid-template-columns: 1fr; }
+  h1 { font-size: 2.5rem; }
+  .flex-item-large, .flex-item-small { flex: none; width: 100%; }
+}
