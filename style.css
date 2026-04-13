@@ -1,7 +1,8 @@
 :root {
   --bg-color: #0f0f0f;
   --card-bg: #1a1a1a;
-  --accent-color: #9d50bb;
+  --accent-color: #6D3F90;
+  --accent-lighter-color: #8658A9;
   --text-main: #eeeeee;
   --text-dim: #cccccc;
   --max-width: 900px;
@@ -17,10 +18,37 @@ body {
 }
 
 header {
-  padding: 96px 16px 60px;
+  padding: 96px 0px 0px;
   text-align: center;
   max-width: var(--max-width);
   margin: 0 auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.logo-container object {
+  display: block;
+  width: 76px;
+  height: auto;
+  filter: 
+    drop-shadow(0 4px 8px rgba(0, 0, 0, 1)) 
+    drop-shadow(0 0 48px var(--accent-color));
+}
+
+.logo-container h1.logo-text {
+  font-size: 3.5rem;
+  font-weight: 550;
+  margin: 0;
+  color: var(--accent-lighter-color);
+  text-transform: uppercase;
+  text-shadow: 
+    0 4px 8px rgba(0, 0, 0, 1), 
+    0 0 64px var(--accent-color);
 }
 
 h1 { font-size: 3.5rem; margin-bottom: 10px; letter-spacing: -1.5px; }
@@ -29,13 +57,15 @@ h3 { font-size: 1.4rem; margin-top: 32px; margin-bottom: 8px; color: var(--text-
 p { color: var(--text-dim); }
 b { color: var(--text-main); }
 p b, li b {
-  color: var(--accent-color);
-  background-color: color-mix(in srgb, var(--accent-color), transparent 80%);
+  color: var(--accent-lighter-color);
+  background-color: color-mix(in srgb, var(--accent-color), transparent 82.5%);
   padding: 2px 6px;
-  border-radius: 8px;
-  font-weight: 600;
+  border-radius: 6px;
+  font-weight: 550;
+  letter-spacing: 0.015rem;
   display: inline-block;
   line-height: 1.2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
 }
 ul.feature-list li::marker {
   color: var(--accent-color);
@@ -43,20 +73,15 @@ ul.feature-list li::marker {
 li b:first-of-type {
   display: block;
   width: fit-content;
-  margin-bottom: 8px;
-  color: var(--accent-color);
-  background-color: color-mix(in srgb, var(--accent-color), transparent 80%);
-  padding: 2px 8px;
-  border-radius: 6px;
+  margin-bottom: 4px;
 }
-li b:not(:first-of-type) {
-  color: var(--accent-color);
-}
+
+
 
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 20px 100px;
+  padding: 0 24px 96px;
 }
 
 .flex-row {
@@ -68,6 +93,8 @@ li b:not(:first-of-type) {
 
 .flex-item-large { flex: 3; }
 .flex-item-small { flex: 2; }
+
+
 
 .image-gallery {
   display: flex;
@@ -84,6 +111,8 @@ li b:not(:first-of-type) {
   object-fit: cover;
 }
 
+
+
 img {
   width: 100%;
   border-radius: 1rem;
@@ -95,14 +124,16 @@ img {
 
 img:hover {
   transform: translateY(-4px);
-  box-shadow: 0 4px 16px color-mix(in srgb, var(--accent-color), transparent 50%);
-  outline: solid var(--accent-color);
+  box-shadow: 0 4px 16px color-mix(in srgb, var(--accent-color), transparent 40%);
+  outline: solid var(--accent-lighter-color);
 }
 
 img:active {
   transform: scale(0.98);
   transition: transform 0.3s ease;
 }
+
+
 
 .feature-list {
   padding-left: 16px;
@@ -137,6 +168,7 @@ img:active {
 }
 
 .feature-list li { margin-bottom: 16px; }
+
 
 
 .container.blurred {
@@ -183,7 +215,6 @@ img:active {
   display: flex;
 }
 
-/* Animation for the Lightbox Image */
 @keyframes zoomIn {
   from {
     transform: scale(0.9);
@@ -194,7 +225,6 @@ img:active {
     opacity: 1;
   }
 }
-
 
 .lightbox.active img {
   animation: zoomIn 0.3s ease-out forwards;
