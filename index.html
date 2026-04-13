@@ -1,148 +1,361 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sona | Genre-Based Music App</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<header>
-    <h1>Sona</h1>
-    <p style="color: var(--accent-color); font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">Genre-Based Music Streaming</p>
-</header>
+  <body>
+    <header>
+      <h1>Sona</h1>
+      <p
+        style="
+          color: var(--accent-color);
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+        "
+      >
+        Genre-Based Music Streaming
+      </p>
+    </header>
 
-<div class="container">
-    
-    <section id="overview">
+    <div class="container">
+      <section id="overview">
         <div class="overview-stack">
-            <h2>🞂 Project Overview</h2>
-            
-            <div class="content-block">
-                <h3>Concept</h3>
-                <p><b>Sona</b> is a premium music streaming experience designed for the music enthusiast, the individual who understands the intricate web of <b>genres and sub-genres</b> that define it. In an era where algorithmic playlists often flatten the musical landscape, Sona restores the joy of intentional discovery through a robust, genre-focused interface.</p>
-            </div>
+          <h2>🞂 Project Overview</h2>
 
-            <div class="content-block">
-                <h3>Why Sona?</h3>
-                <p>I noticed a growing disconnect between modern streaming platforms and the users who crave deeper organization. While current apps excel at passive discovery, they often bury the specific genre data that enthusiasts use to categorize their playlists.</p>
-                <p>To validate this, I conducted a user questionnaire among friends and colleagues to identify their primary frustrations with existing services. The results were clear:</p>
-                <ul class="feature-list">
-                    <li><b>The Top Pain Point</b> A significant majority of respondents identified the inability to search for or explore genres in an <b>organized, hierarchical fashion</b> as a primary friction point in their daily use.</li>
-                    <li><b>The Problem</b> Users felt that genres were treated as flat buckets rather than complex trees, making it difficult to find niche sub-genres (like <i>Djent</i>, <i>Fusion-Jazz</i> or <i>Hardstyle</i>) without knowing the specific artist name first.</li>
-                </ul>
-            </div>
+          <div class="content-block">
+            <h3>Concept</h3>
+            <p>
+              <b>Sona</b> is a premium music streaming experience designed for
+              the music enthusiast, the individual who understands the intricate
+              web of <b>genres and sub-genres</b> that define it. In an era
+              where algorithmic playlists often flatten the musical landscape,
+              Sona restores the joy of intentional discovery through a robust,
+              genre-focused interface.
+            </p>
+          </div>
 
-            <div class="content-block">
-                <h3>Solution</h3>
-                <p>Sona was born from the need to turn metadata into a first-class citizen. My goal was to create a cohesive environment that balances dense information with intuitive navigation:</p>
-                <ul class="feature-list">
-                    <li><b>Intelligent Taxonomy</b>I developed a unified <b>Genre Hub</b> that visualizes the relationship between parent categories and niche sub-genres. This system is powered by a "Hierarchy-Aware" search: when a user searches for a specific sub-genre, the interface automatically expands the relevant parent category while collapsing others, utilizing visual effects to provide immediate focus on the result.</li>
-                    <li><b>Universal Genre Context</b> To ensure discovery is never more than a tap away, I implemented a system of <b>Genre Pills</b> across many components of the app. Whether browsing an Artist page, looking at Playlist cards, or viewing the Search page, these interactive chips highlight the specific sub-genres of the content, allowing users to pivot their discovery journey instantly from any screen.</li>
-                    <li><b>Dynamic Tab</b> I replaced the traditional static playback bar with an expanding tab system anchored in the global navigation. This maintains the user’s "Sense of Place" while browsing; a simple upward gesture expands the playback view, while a pulsing empty state loop animation acts as a subtle CTA to keep the music flowing.</li>
-                </ul>
-            </div>
+          <div class="content-block">
+            <h3>Why Sona?</h3>
+            <p>
+              I noticed a growing disconnect between modern streaming platforms
+              and the users who crave deeper organization. While current apps
+              excel at passive discovery, they often bury the specific genre
+              data that enthusiasts use to categorize their playlists.
+            </p>
+            <p>
+              To validate this, I conducted a user questionnaire among friends
+              and colleagues to identify their primary frustrations with
+              existing services. The results were clear:
+            </p>
+            <ul class="feature-list">
+              <li>
+                <b>The Top Pain Point</b> A significant majority of respondents
+                identified the inability to search for or explore genres in an
+                <b>organized, hierarchical fashion</b> as a primary friction
+                point in their daily use.
+              </li>
+              <li>
+                <b>The Problem</b> Users felt that genres were treated as flat
+                buckets rather than complex trees, making it difficult to find
+                niche sub-genres (like <i>Djent</i>, <i>Fusion-Jazz</i> or
+                <i>Hardstyle</i>) without knowing the specific artist name
+                first.
+              </li>
+            </ul>
+          </div>
+
+          <div class="content-block">
+            <h3>Solution</h3>
+            <p>
+              Sona was born from the need to turn metadata into a first-class
+              citizen. My goal was to create a cohesive environment that
+              balances dense information with intuitive navigation:
+            </p>
+            <ul class="feature-list">
+              <li>
+                <b>Intelligent Taxonomy</b>I developed a unified
+                <b>Genre Hub</b> that visualizes the relationship between parent
+                categories and niche sub-genres. This system is powered by a
+                "Hierarchy-Aware" search: when a user searches for a specific
+                sub-genre, the interface automatically expands the relevant
+                parent category while collapsing others, utilizing visual
+                effects to provide immediate focus on the result.
+              </li>
+              <li>
+                <b>Universal Genre Context</b> To ensure discovery is never more
+                than a tap away, I implemented a system of
+                <b>Genre Pills</b> across many components of the app. Whether
+                browsing an Artist page, looking at Playlist cards, or viewing
+                the Search page, these interactive chips highlight the specific
+                sub-genres of the content, allowing users to pivot their
+                discovery journey instantly from any screen.
+              </li>
+              <li>
+                <b>Dynamic Tab</b> I replaced the traditional static playback
+                bar with an expanding tab system anchored in the global
+                navigation. This maintains the user’s "Sense of Place" while
+                browsing; a simple upward gesture expands the playback view,
+                while a pulsing empty state loop animation acts as a subtle CTA
+                to keep the music flowing.
+              </li>
+            </ul>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section id="genre-hub">
+      <section id="genre-hub">
         <h2>🞂 Genre Hub</h2>
 
         <div class="image-gallery">
-            <img src="img/SonaSearch_01.png" alt="Genre Hub Selection" onclick="openLightbox(this.src)">
-            <img src="img/SonaSearch_02.png" alt="Genre Highlight" onclick="openLightbox(this.src)">
-            <img src="img/SonaSearch_03.png" alt="Search Results" onclick="openLightbox(this.src)">
+          <img
+            src="img/SonaSearch_01.png"
+            alt="Genre Hub Selection"
+            onclick="openLightbox(this.src)"
+          />
+          <img
+            src="img/SonaSearch_02.png"
+            alt="Genre Highlight"
+            onclick="openLightbox(this.src)"
+          />
+          <img
+            src="img/SonaSearch_03.png"
+            alt="Search Results"
+            onclick="openLightbox(this.src)"
+          />
         </div>
 
         <div class="content-block">
-            <p>The Genre Hub is the core of the Sona experience. It addresses the primary user frustration identified in my research: the lack of meaningful genre organization in modern streaming apps.</p>
-            <h3>Multi-Selection Exploration</h3>
-            <p>The hub is built on a hierarchical tree model that allows users to drill down into complex musical lineages.</p>
-            <ul class="feature-list">
-                <li><b>Intuitive Hierarchy</b> Users can expand parent categories to reveal curated sub-genres, maintaining a clean interface while providing massive depth. Sub-genres can also behave like parents hosting other sub-genres themselves.</li>
-                <li><b>Mass Selection</b> Interactive chips allow for quick multi-selection. Users can select an entire parent category or cherry-pick niche sub-genres to create highly specific discovery results.</li>
-            </ul>
-            <h3>Hierarchy-Aware Search</h3>
-            <p>To streamline the discovery of niche genres, the search function within the hub is contextually aware of the app’s taxonomy.</p>
-            <ul class="feature-list">
-                <li><b>Auto-Expansion</b> When a user types a specific term the system automatically collapses irrelevant categories and expands the found parent or child genre.</li>
-                <li><b>Visual Focus</b> The targeted result is highlighted, creating a clear visual anchor that guides the user’s eye directly to their search intent.</li>
-            </ul>
-            <h3>Transition to Discovery</h3>
-            <p>Once the selection is confirmed, the app transitions into a results state that maintains the Genre First philosophy.</p>
-            <ul class="feature-list">
-                <li><b>Dynamic Results</b> The search results page doesn't just show songs; it prioritizes "Spotlight" artists and trending content that matches the specific genre fingerprint the user just created.</li>
-                <li><b>Persistent Context</b> The selected genre filters remain visible as interactive dismissible chips at the bottom of the screen, allowing users to tweak their selection without losing their place in the discovery scroll.</li>
+          <p>
+            The Genre Hub is the core of the Sona experience. It addresses the
+            primary user frustration identified in my research: the lack of
+            meaningful genre organization in modern streaming apps.
+          </p>
+          <h3>Multi-Selection Exploration</h3>
+          <p>
+            The hub is built on a hierarchical tree model that allows users to
+            drill down into complex musical lineages.
+          </p>
+          <ul class="feature-list">
+            <li>
+              <b>Intuitive Hierarchy</b> Users can expand parent categories to
+              reveal curated sub-genres, maintaining a clean interface while
+              providing massive depth. Sub-genres can also behave like parents
+              hosting other sub-genres themselves.
+            </li>
+            <li>
+              <b>Mass Selection</b> Interactive chips allow for quick
+              multi-selection. Users can select an entire parent category or
+              cherry-pick niche sub-genres to create highly specific discovery
+              results.
+            </li>
+          </ul>
+          <h3>Hierarchy-Aware Search</h3>
+          <p>
+            To streamline the discovery of niche genres, the search function
+            within the hub is contextually aware of the app’s taxonomy.
+          </p>
+          <ul class="feature-list">
+            <li>
+              <b>Auto-Expansion</b> When a user types a specific term the system
+              automatically collapses irrelevant categories and expands the
+              found parent or child genre.
+            </li>
+            <li>
+              <b>Visual Focus</b> The targeted result is highlighted, creating a
+              clear visual anchor that guides the user’s eye directly to their
+              search intent.
+            </li>
+          </ul>
+          <h3>Transition to Discovery</h3>
+          <p>
+            Once the selection is confirmed, the app transitions into a results
+            state that maintains the Genre First philosophy.
+          </p>
+          <ul class="feature-list">
+            <li>
+              <b>Dynamic Results</b> The search results page doesn't just show
+              songs; it prioritizes "Spotlight" artists and trending content
+              that matches the specific genre fingerprint the user just created.
+            </li>
+            <li>
+              <b>Persistent Context</b> The selected genre filters remain
+              visible as interactive dismissible chips at the bottom of the
+              screen, allowing users to tweak their selection without losing
+              their place in the discovery scroll.
+            </li>
+          </ul>
         </div>
-    </section>
+      </section>
 
-    <section id="player">
-      <h2>🞂 Dynamic Playback Tab</h2>
+      <section id="player">
+        <h2>🞂 Dynamic Playback Tab</h2>
 
-      <div class="content-block">
-          <p>Another frustration identified in my user research was the "obstruction factor" of traditional music players. Users complained that standard floating playback bars often felt in the way, creating a cramped UI that obstructed browsing.</p>
-      </div>
+        <div class="content-block">
+          <p>
+            Another frustration identified in my user research was the
+            "obstruction factor" of traditional music players. Users complained
+            that standard floating playback bars often felt in the way, creating
+            a cramped UI that obstructed browsing.
+          </p>
+        </div>
 
-      <div class="portrait-feature">
+        <div class="portrait-feature">
           <div class="flex-item-image">
-              <img src="img/SonaPlayer_01.gif" alt="Sona Player Expansion" onclick="openLightbox(this.src)">
+            <img
+              src="img/SonaPlayer_01.gif"
+              alt="Sona Player Expansion"
+              onclick="openLightbox(this.src)"
+            />
           </div>
-          
+
           <div class="flex-item-text">
-              <h3>The Unified Player</h3>
-              <p>To solve this, I transformed the static navigation bar into a living <b>playback component</b>. In Sona, the navigation is also the player, creating a cleaner interface that maximizes screen real estate for discovery.</p>
-              <p>By consolidating navigation and playback into the bottom 10% of the screen, I reduced UI clutter and optimized the experience for one-handed use.</p>
-              <ul class="feature-list">
-                  <li><b>Fluid Gesture Architecture</b> A simple upward drag on the player tab expands into a bottom sheet, eliminating the need for precision tapping and keeping all primary controls within the natural thumb zone.</li>
-                  <li><b>Integrated Progress Handle</b> The playback progress bar is built directly into the tab bar. This serves as a constant status update.</li>
-                  <li><b>Uninterrupted Browsing</b> By anchoring the playback engine inside the navigation layer, the user never feels like the player is an obstacle.</li>
-              </ul>
+            <h3>The Unified Player</h3>
+            <p>
+              To solve this, I transformed the static navigation bar into a
+              living <b>playback component</b>. In Sona, the navigation is also
+              the player, creating a cleaner interface that maximizes screen
+              real estate for discovery.
+            </p>
+            <p>
+              By consolidating navigation and playback into the bottom 10% of
+              the screen, I reduced UI clutter and optimized the experience for
+              one-handed use.
+            </p>
+            <ul class="feature-list">
+              <li>
+                <b>Fluid Gesture Architecture</b> A simple upward drag on the
+                player tab expands into a bottom sheet, eliminating the need for
+                precision tapping and keeping all primary controls within the
+                natural thumb zone.
+              </li>
+              <li>
+                <b>Integrated Progress Handle</b> The playback progress bar is
+                built directly into the tab bar. This serves as a constant
+                status update.
+              </li>
+              <li>
+                <b>Uninterrupted Browsing</b> By anchoring the playback engine
+                inside the navigation layer, the user never feels like the
+                player is an obstacle.
+              </li>
+            </ul>
           </div>
-      </div>
-    </section>
+        </div>
+      </section>
 
-    <section id="consistency">
-      <h2>🞂 Consistency</h2>
-      <div class="image-gallery">
-        <img src="img/SonaHome_01.gif" alt="Homepage" onclick="openLightbox(this.src)">
-        <img src="img/SonaArtist_01.png" alt="Artist page" onclick="openLightbox(this.src)">
-        <img src="img/SonaFeed_01.png" alt="Feed page" onclick="openLightbox(this.src)">
-        <img src="img/SonaLibrary_01.png" alt="Homepage" onclick="openLightbox(this.src)">
-        <img src="img/SonaPlaylists_01.png" alt="Artist page" onclick="openLightbox(this.src)">
-      </div>
-      <p>To reinforce Sona's identity as a genre-first platform, I integrated interactive <b>genre chips</b> as a core navigation element throughout the entire ecosystem.</p>
-      <p>This persistent design language ensures that <b>discovery is never a dead end</b>, allowing users to explore the intricate web of musical sub-genres from any screen in the app.</p>
-      <ul class="feature-list">
-        <li><b>Universal Discovery</b> Whether on an Artist profile, a curated Playlist, or within a shared Collection, these chips provide immediate context for the music being viewed.</li>
-        <li><b>Frictionless Pivot</b> Every chip is a functional shortcut. Tapping a genre instantly pivots the user to the Genre Hub Results, pre-filtered to that specific category.</li>
-        <li><b>Visual Hierarchy</b> The use chips for metadata ensures that deep information remains available without cluttering the primary visual experience of album and artist art.</li>
-      </ul>
+      <section id="consistency">
+        <h2>🞂 Consistency</h2>
+        <div class="image-gallery">
+          <img
+            src="img/SonaHome_01.gif"
+            alt="Homepage"
+            onclick="openLightbox(this.src)"
+          />
+          <img
+            src="img/SonaArtist_01.gif"
+            alt="Artist page"
+            onclick="openLightbox(this.src)"
+          />
+          <img
+            src="img/SonaPlaylist_01.gif"
+            alt="Feed page"
+            onclick="openLightbox(this.src)"
+          />
+          <img
+            src="img/SonaSearch_11.png"
+            alt="Artist page"
+            onclick="openLightbox(this.src)"
+          />
+          <img
+            src="img/SonaFeed_01.png"
+            alt="Feed page"
+            onclick="openLightbox(this.src)"
+          />
+          <img
+            src="img/SonaLibrary_01.png"
+            alt="Homepage"
+            onclick="openLightbox(this.src)"
+          />
+        </div>
+        <p>
+          To reinforce Sona's identity as a genre-first platform, I integrated
+          interactive <b>genre chips</b> as a core navigation element throughout
+          the entire ecosystem.
+        </p>
+        <p>
+          This persistent design language ensures that
+          <b>discovery is never a dead end</b>, allowing users to explore the
+          intricate web of musical sub-genres from any screen in the app.
+        </p>
+        <ul class="feature-list">
+          <li>
+            <b>Universal Discovery</b> Whether on an Artist profile, a curated
+            Playlist, or within a shared Collection, these chips provide
+            immediate context for the music being viewed.
+          </li>
+          <li>
+            <b>Frictionless Pivot</b> Every chip is a functional shortcut.
+            Tapping a genre instantly pivots the user to the Genre Hub Results,
+            pre-filtered to that specific category.
+          </li>
+          <li>
+            <b>Visual Hierarchy</b> The use chips for metadata ensures that deep
+            information remains available without cluttering the primary visual
+            experience of album and artist art.
+          </li>
+        </ul>
+      </section>
+    </div>
 
-</div>
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <img id="lightbox-img" src="" alt="Full size preview" />
+    </div>
 
-<div id="lightbox" class="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img" src="" alt="Full size preview">
-</div>
+    <script>
+      //   function openLightbox(src) {
+      //     const lightbox = document.getElementById("lightbox");
+      //     const img = document.getElementById("lightbox-img");
+      //     img.src = src;
+      //     lightbox.classList.add("active");
+      //     // Prevent scrolling while looking at the image
+      //     document.body.style.overflow = "hidden";
+      //   }
 
-<script>
-  function openLightbox(src) {
-      const lightbox = document.getElementById('lightbox');
-      const img = document.getElementById('lightbox-img');
-      img.src = src;
-      lightbox.classList.add('active');
-      // Prevent scrolling while looking at the image
-      document.body.style.overflow = 'hidden';
-  }
+      function openLightbox(src) {
+        const lightbox = document.getElementById("lightbox");
+        const container = document.querySelector(".container");
 
-  function closeLightbox() {
-      const lightbox = document.getElementById('lightbox');
-      lightbox.classList.remove('active');
-      // Re-enable scrolling
-      document.body.style.overflow = 'auto';
-  }
-</script>
+        document.getElementById("lightbox-img").src = src;
+        lightbox.classList.add("active");
+        container.classList.add("blurred");
+        document.body.style.overflow = "hidden";
+      }
 
-</body>
+      //   function closeLightbox() {
+      //     const lightbox = document.getElementById("lightbox");
+      //     lightbox.classList.remove("active");
+      //     // Re-enable scrolling
+      //     document.body.style.overflow = "auto";
+      //   }
+
+      function closeLightbox() {
+        const lightbox = document.getElementById("lightbox");
+        const container = document.querySelector(".container");
+
+        lightbox.classList.remove("active");
+
+        container.classList.remove("blurred");
+        document.body.style.overflow = "auto";
+      }
+    </script>
+  </body>
 </html>
