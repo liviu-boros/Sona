@@ -81,7 +81,7 @@ li b:first-of-type {
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 24px 96px;
+  padding: 0 24px 256px;
 }
 
 .flex-row {
@@ -122,17 +122,20 @@ img {
   display: block;
 }
 
-img:hover {
+img:not(.defaultReset):hover {
   transform: translateY(-4px);
   box-shadow: 0 4px 16px color-mix(in srgb, var(--accent-color), transparent 40%);
   outline: solid var(--accent-lighter-color);
 }
 
-img:active {
+img:not(.defaultReset):active {
   transform: scale(0.98);
   transition: transform 0.3s ease;
 }
 
+img.defaultReset {
+  cursor: default;
+}
 
 
 .feature-list {
@@ -214,6 +217,43 @@ img:active {
 .lightbox.active {
   display: flex;
 }
+
+
+
+.download-container {
+  margin-top: 32px;
+  display: flex;
+}
+
+.btn-download {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px 24px;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 82.5%);
+  color: var(--accent-lighter-color);
+  text-decoration: none;
+  border-radius: 1rem;
+  outline: 2px solid var(--accent-lighter-color);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-download:hover {
+  outline: 2px solid transparent;
+  background-color: var(--accent-color);
+  color: white;
+  box-shadow: 0 4px 16px color-mix(in srgb, var(--accent-color), transparent 40%);
+  transform: translateY(-2px);
+}
+
+.btn-download:active {
+  transform: translateY(0);
+}
+
+
 
 @keyframes zoomIn {
   from {
